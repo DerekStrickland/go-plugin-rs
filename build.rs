@@ -7,6 +7,7 @@ fn main() -> Result<()> {
         .compile_well_known_types(true)
         .include_file("mod.rs")
         .type_attribute(".", "#[derive(serde::Deserialize)]")
+        .type_attribute(".", "#[derive(serde::Serialize)]")
         .compile(&["proto/kv.proto"], &["proto"])
         .unwrap();
 

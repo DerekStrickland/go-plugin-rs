@@ -70,8 +70,8 @@ impl Kv for PluginServer {
         let store = store_clone.lock().unwrap();
 
         match store.get(&key) {
-            Some(value) => Ok(tonic::Response::new(GetResponse {
-                value: value.clone(),
+            Some(value) => Ok(Response::new(GetResponse {
+                value: value.clone().to_vec(),
             })),
             None => Err(Status::invalid_argument("key not found")),
         }

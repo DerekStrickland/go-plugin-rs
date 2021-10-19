@@ -1,21 +1,21 @@
-#[derive(serde::Deserialize, Clone, PartialEq, ::prost::Message)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, PartialEq, ::prost::Message)]
 pub struct GetRequest {
     #[prost(string, tag = "1")]
     pub key: ::prost::alloc::string::String,
 }
-#[derive(serde::Deserialize, Clone, PartialEq, ::prost::Message)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, PartialEq, ::prost::Message)]
 pub struct GetResponse {
     #[prost(bytes = "vec", tag = "1")]
     pub value: ::prost::alloc::vec::Vec<u8>,
 }
-#[derive(serde::Deserialize, Clone, PartialEq, ::prost::Message)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, PartialEq, ::prost::Message)]
 pub struct PutRequest {
     #[prost(string, tag = "1")]
     pub key: ::prost::alloc::string::String,
     #[prost(bytes = "vec", tag = "2")]
     pub value: ::prost::alloc::vec::Vec<u8>,
 }
-#[derive(serde::Deserialize, Clone, PartialEq, ::prost::Message)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, PartialEq, ::prost::Message)]
 pub struct Empty {}
 #[doc = r" Generated client implementations."]
 pub mod kv_client {
