@@ -43,3 +43,8 @@ path = "src/main.rs"
 [[bin]]
 name = "test-client"
 path = "src/test_client.rs"
+
+# file-descriptor binary
+[[bin]]
+name = "file-descriptor"
+path = "src/file_descriptor.rs"
